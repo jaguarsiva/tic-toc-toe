@@ -1,0 +1,147 @@
+
+/* Import Other Css files */
+@import url('./fonts.css');
+
+@import url('./partials/globals.css');
+@import url('./partials/variables.css');
+
+/* Start of Header Styles */
+#site-header
+{
+    width: 100%;
+    height: 15%;
+    padding: 20px 50px;
+    background: var(--bg-color);
+    font-family: 'ubuntu';
+}
+
+#site-header .fas
+{
+    font-size: 100px;
+}
+
+#site-header .site-logo , #site-header .site-title
+{
+    background: var(--gradient-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+}
+
+#site-header .site-logo{
+    top: 2%;
+    left: 35%;
+}
+
+#site-header .site-title{
+    top: 3%;
+    left: 45%;
+    font-size: 60px;
+    cursor: context-menu;
+}
+/* End of Header Styles */
+
+#site-main
+{
+    width: 100%;
+    font-family: 'ubuntu';
+}
+
+.site-login , .site-signup , .site-game
+{
+    min-height: 85vh;
+}
+
+.site-login .login-form, .site-signup .signup-form ,.site-game .game-form
+{
+    width: 60%;
+    height: 65%;
+    position: absolute;
+    left: 20%;
+    margin-top: 5%;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 30px 40px;
+    background: var(--bg-color);
+    box-shadow: var(--shadow-color);
+}
+
+
+.site-login .login-form .login-title , .site-signup .signup-form .signup-title , .game-title
+{
+    font-size: 50px;
+    font-weight: 500;
+    font-style: italic;
+    color: whitesmoke;
+}
+
+.site-login .login-form .login-label , .site-signup .signup-form .signup-label , .game-label
+{
+    font-size: 25px;
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+.form-group
+{
+    width: 60%;
+    margin: 30px auto;
+}
+
+.form-group .form-control
+{
+    color: black;
+    padding: 20px 10px;
+    font-size: 22px;
+}
+
+
+.login-form .login-btn , .signup-form .signup-btn , .game-form .game-btn
+{
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: 26px;
+}
+
+.login-form .login-btn:hover, .signup-form .signup-btn:hover , .game-form .game-btn:hover
+{
+    background: whitesmoke;
+    color: black;
+}
+
+.site-login .login-form .reg-btn, .site-signup .signup-form .log-btn
+{
+    border: none;
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 500;
+    position: absolute;
+    left: 40%;
+}
+
+.site-login .login-form .reg-btn:hover
+{
+    text-decoration: underline; 
+}
+
+/* Start of Footer Styles */
+#site-footer
+{
+    background: var(--bg-color);
+    width: 100%;
+    height: 25%;
+    position: relative;
+    font-size: 22px;
+}
+
+#site-footer .footer-text, .footer-copyrights
+{
+    position: relative;
+    top: 25%;
+    text-align: center;
+    color: white;
+    font-family: 'balsmiq';
+}
+
+/* End of Footer Styles */

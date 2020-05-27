@@ -1,0 +1,14 @@
+
+/* Import All css Fonts here */
+
+@font-face
+{
+    font-family: 'balsmiq';
+    src: url('../fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf');
+}
+
+@font-face
+{
+    font-family: 'ubuntu';
+    src: url('../fonts/Ubuntu/Ubuntu-Regular.ttf');
+}

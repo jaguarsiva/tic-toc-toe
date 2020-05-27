@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Play Tic Toc Toe</title>
+
+    <!-- Linking the Site icon -->
+    <link rel="icon" href="./images/icon.png" />
+
+    <!-- Linking Custom css file -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Linking bootstrap css file -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- Linking Font Awesome css file -->
+    <link rel="stylesheet" href="./css/all.min.css">
+
+</head>
+<body>
+
+    <header id="site-header">
+        <i class="fas fa-gamepad site-logo" title="logo"></i>
+        <h1 class="site-title">Tic Toc Toe</h1>
+    </header>
+
+    <main id="site-main">
+        <section class="site-login" id="login">
+            <div class="container">
+                <form class="login-form" onsubmit="loginSubmit()">
+                    <h1 class="login-title text-center">Login Page</h1>
+                    <div class="form-group">
+                        <label class="login-label">Username</label>
+                        <input type="text" class="form-control" placeholder="Username" id="lname" required> 
+                    </div>
+
+                    <div class="form-group">
+                        <label class="login-label">Password</label>
+                        <input type="password" class="form-control" placeholder="Password" id="lpass" autocomplete="on" required> 
+                    </div>
+
+                    <div class="form-group w-25">
+                        <input type="submit" value="Login" class="btn btn-lg btn-block login-btn btn-success"/>
+                    </div>
+                    <div class="form-group">
+                        <a type="button" class="reg-btn" href="#" onclick="openRegister()">Register here!.</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="site-signup" id="signup">
+            <div class="container">
+                <form class="signup-form" onsubmit="registerSubmit()">
+                    <h1 class="signup-title text-center">Sign Up</h1>
+                    <div class="form-group">
+                        <label class="signup-label">Username</label>
+                        <input type="text" class="form-control" placeholder="Username" id="Rname" required> 
+                    </div>
+
+                    <div class="form-group">
+                        <label class="signup-label">Password</label>
+                        <input type="password" class="form-control" placeholder="Password" id="Rpass" autocomplete="on" required> 
+                    </div>
+
+                    <div class="form-group w-25">
+                        <input type="submit" value="Register" class="btn btn-lg btn-block signup-btn btn-success"/>
+                    </div>
+                    <div class="form-group">
+                        <a type="button" class="log-btn" href="#" onclick="openLogin()">Login here!.</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="site-game" id="game-bar">
+            <div class="container">
+                <form class="game-form" onsubmit="gameOn()">
+                    <h1 class="game-title text-center">Game Bar</h1>
+                    <div class="form-group">
+                        <label class="game-label">Player 1</label>
+                        <input type="text" class="form-control" placeholder="Name" required> 
+                    </div>
+
+                    <div class="form-group">
+                        <label class="game-label">Player 2</label>
+                        <input type="text" class="form-control" placeholder="Name" required> 
+                    </div>
+
+                    <div class="form-group w-25">
+                        <button type="submit" class="btn btn-lg btn-block game-btn btn-success">Let's Play<i class="fas fa-volleyball-ball pl-2"></i></button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer">
+        <p class="footer-text">
+            Enjoy the Game!..
+        </p>
+        <p class="footer-copyrights">
+            @2020 Copyrights : <a href="#site-header">tic-toc-toe.com</a>
+        </p>
+    </footer>
+
+    <!-- Linking custom js file -->
+    <script src="./js/main.js"></script>
+
+    <!-- Linking Jquery js File -->
+    <script src="./js/jquery.js"></script>
+
+    <!-- Linking bootstrap Js File -->
+    <script src="./js/bootstrap.min.js"></script>
+
+</body>
+</html>
