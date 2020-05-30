@@ -5,10 +5,12 @@
 {
     font-family: 'balsmiq';
     src: url('../fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf');
+    font-display: block;
 }
 
 @font-face
 {
     font-family: 'ubuntu';
     src: url('../fonts/Ubuntu/Ubuntu-Regular.ttf');
+    font-display: block;
 }
