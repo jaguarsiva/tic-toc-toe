@@ -3,6 +3,7 @@
 #### Play the game via the below Links 
 
 1 Using Github Pages : [Link - 1](https://jaguarsiva.github.io/tic-toc-toe/)
+
 2 Using Netlify : [Link - 2](https://tic-toc-toe-siva.netlify.app/)
 
 ---
