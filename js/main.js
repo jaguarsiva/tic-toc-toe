@@ -161,7 +161,7 @@ function cellClicked(event)
     cellCheck()
 }
 
-var cells,winner='';
+var cells,winner='',winSound;
 const obj = document.getElementsByClassName('game-cell')
 
 function cellCheck()
@@ -178,14 +178,6 @@ function cellCheck()
         obj[8].innerHTML
     ]
     
-    var Full = true
-    for(let i=0;i<9;i++)
-        if(cells[i] != '💔' && cells[i] != '💚')
-        {
-            Full = false;
-            break;
-        }
-    
     var arr1=[],arr2=[];
     for(let i=0;i<9;i++)
     {
@@ -199,7 +191,7 @@ function cellCheck()
         {
             winner = player1;
             turntxt.innerHTML = "Hurray! "+winner+" won the Game";
-            var winSound = document.createElement('audio');
+            winSound = document.createElement('audio');
             winSound.src = '../audios/win.mp3';
             winSound.play();
 
@@ -214,7 +206,7 @@ function cellCheck()
         {
             winner = player2;
             turntxt.innerHTML = "Hurray! "+winner+" won the Game";
-            var winSound = document.createElement('audio');
+            winSound = document.createElement('audio');
             winSound.src = '../audios/win.mp3';
             winSound.play();
 
@@ -223,8 +215,17 @@ function cellCheck()
                }, 250);
             pushWinner();
         }
-           
-    if(Full && winner=='')
+    
+        
+    var Full = true
+    for(let i=0;i<9;i++)
+        if(cells[i] != '💔' && cells[i] != '💚')
+        {
+            Full = false;
+            break;
+        }
+    
+    if(Full)
     {
         var drawSound = document.createElement('audio');
         drawSound.src = '../audios/draw.wav';
@@ -285,8 +286,11 @@ function pushWinner(){
 
 function restartGame()
 {
-    winSound.pause();
-    winSound.currentTime = 0;
+    if(winSound)
+    {
+        winSound.pause();
+        winSound.currentTime = 0;
+    }
     document.getElementById('spintxt-box').appendChild(spintxt);
     spintxt.innerHTML = 'Spin to Decide Who starts the game First'
     spintxt.classList.remove('text-uppercase')
