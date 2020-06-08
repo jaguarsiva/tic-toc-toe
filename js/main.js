@@ -199,6 +199,10 @@ function cellCheck()
         {
             winner = player1;
             turntxt.innerHTML = "Hurray! "+winner+" won the Game";
+            var winSound = document.createElement('audio');
+            winSound.src = '../audios/win.mp3';
+            winSound.play();
+
             setTimeout( function(){
                 alert(player1+" Won!..."); 
                }, 250);
@@ -210,6 +214,10 @@ function cellCheck()
         {
             winner = player2;
             turntxt.innerHTML = "Hurray! "+winner+" won the Game";
+            var winSound = document.createElement('audio');
+            winSound.src = '../audios/win.mp3';
+            winSound.play();
+
             setTimeout( function(){
                 alert(player2+" Won!..."); 
                }, 250);
@@ -218,6 +226,9 @@ function cellCheck()
            
     if(Full && winner=='')
     {
+        var drawSound = document.createElement('audio');
+        drawSound.src = '../audios/draw.wav';
+        drawSound.play();
         alert("Games Ends in a draw")
         pushWinner();
         return;
@@ -263,6 +274,7 @@ function isPresent(ele,array){
 }
 
 function pushWinner(){
+
     document.getElementsByClassName('boxtable')[0].setAttribute('style','pointer-events:none;')
     setTimeout( function(){
         let cnfrmMSG = confirm("Do You want to replay!");
@@ -273,6 +285,8 @@ function pushWinner(){
 
 function restartGame()
 {
+    winSound.pause();
+    winSound.currentTime = 0;
     document.getElementById('spintxt-box').appendChild(spintxt);
     spintxt.innerHTML = 'Spin to Decide Who starts the game First'
     spintxt.classList.remove('text-uppercase')
