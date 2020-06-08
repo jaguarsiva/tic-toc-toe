@@ -2,7 +2,7 @@
 
 #### Play the game via the below Link 
 
-Using Netlify : [Link - 2](https://tic-toc-toe-siva.netlify.app/)
+Using Netlify : [Link](https://tic-toc-toe-siva.netlify.app/)
 
 ---
 
@@ -23,5 +23,5 @@ There you need to fill the players names and hit **Let's Play** to start the gam
 
 ---
 
-### This page was created by *[Siva Chandran](https://github.com/jaguarsiva)*
+### This page was created by *[Siva Chandran](https://jaguarsiva.github.io/myblog/)*
 This page was build using **HTML , CSS and Javascript**.
