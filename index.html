@@ -4,6 +4,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a Tic Toc Toe Game">
+    <meta name="author" content="Siva Chandran">
     <title>Let's Play Tic Toc Toe</title>
 
     <!-- Linking the Site icon -->
@@ -21,79 +23,131 @@
 </head>
 <body>
 
-    <header id="site-header">
-        <i class="fas fa-gamepad site-logo" title="logo"></i>
-        <h1 class="site-title">Tic Toc Toe</h1>
+    <header id="site-header" class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <i class="fas fa-gamepad site-logo" title="logo"></i>
+                <h1 class="site-title pl-sm-2">Tic Toc Toe</h1>
+            </div>
+        </div>
     </header>
 
-    <main id="site-main">
-        <section class="site-login" id="login">
-            <div class="container">
-                <form class="login-form" onsubmit="loginSubmit()">
+    <main id="site-main" class="container">
+        
+        <section>
+            <div class="row site-login" id="login">
+                <form class="login-form col-lg-10 mx-auto" onsubmit="loginSubmit()">
+                
                     <h1 class="login-title text-center">Login Page</h1>
-                    <div class="form-group">
-                        <label class="login-label">Username</label>
-                        <input type="text" class="form-control" placeholder="Username" id="lname" required> 
-                    </div>
-
-                    <div class="form-group">
-                        <label class="login-label">Password</label>
-                        <input type="password" class="form-control" placeholder="Password" id="lpass" autocomplete="on" required> 
-                    </div>
-
-                    <div class="form-group w-25">
-                        <input type="submit" value="Login" class="btn btn-lg btn-block login-btn btn-success"/>
-                    </div>
-                    <div class="form-group">
-                        <a type="button" class="reg-btn" href="#" onclick="openRegister()">Register here!.</a>
-                    </div>
-                </form>
-            </div>
+                    
+                    <div class="form-group col-lg-8 mx-auto">
+                    <label class="login-label">Username</label>
+                    <input type="text" class="form-control" id="lname" required> 
+                </div>
+                
+                <div class="form-group col-lg-8 mx-auto">
+                    <label class="login-label">Password</label>
+                    <input type="password" class="form-control" id="lpass" autocomplete="on" required> 
+                </div>
+    
+                <div class="form-group col-lg-4 mx-auto mt-4">
+                    <input type="submit" value="Login" class="btn btn-lg btn-block login-btn btn-info"/>
+                </div>
+                <div class="form-group col-lg-8 mx-auto mt-4">
+                    <a type="button" class="reg-btn" href="#" onclick="openRegister()">Not Registered , Signup here!.</a>
+                </div>
+            </form>
+        </div>
         </section>
-
-        <section class="site-signup" id="signup">
-            <div class="container">
-                <form class="signup-form" onsubmit="registerSubmit()">
-                    <h1 class="signup-title text-center">Sign Up</h1>
-                    <div class="form-group">
-                        <label class="signup-label">Username</label>
-                        <input type="text" class="form-control" placeholder="Username" id="Rname" required> 
-                    </div>
-
-                    <div class="form-group">
-                        <label class="signup-label">Password</label>
-                        <input type="password" class="form-control" placeholder="Password" id="Rpass" autocomplete="on" required> 
-                    </div>
-
-                    <div class="form-group w-25">
-                        <input type="submit" value="Register" class="btn btn-lg btn-block signup-btn btn-success"/>
-                    </div>
-                    <div class="form-group">
-                        <a type="button" class="log-btn" href="#" onclick="openLogin()">Login here!.</a>
-                    </div>
-                </form>
-            </div>
+        
+        <section>
+        <div class="site-signup row" id="signup">
+            <form class="signup-form col-lg-10 mx-auto" onsubmit="registerSubmit()">
+                
+                <h1 class="signup-title text-center">Sign Up Page</h1>
+                
+                <div class="form-group col-lg-8 mx-auto">
+                    <label class="signup-label">Username</label>
+                    <input type="text" class="form-control" id="Rname" required> 
+                </div>
+    
+                <div class="form-group col-lg-8 mx-auto">
+                    <label class="signup-label">Password</label>
+                    <input type="password" class="form-control" id="Rpass" autocomplete="on" required> 
+                </div>
+    
+                <div class="form-group col-lg-4 mx-auto mt-4">
+                    <input type="submit" value="Register" class="btn btn-lg btn-block signup-btn btn-info"/>
+                </div>
+                <div class="form-group col-lg-8 mx-auto mt-4">
+                    <a type="button" class="log-btn" href="#" onclick="openLogin()">Already Registered , Login here!.</a>
+                </div>
+            </form>
+        </div>
         </section>
-        <section class="site-game" id="game-bar">
-            <div class="container">
-                <form class="game-form" onsubmit="gameOn()">
+    
+        <section>
+            <div class="site-game row" id="game-bar">
+                <form class="game-form col-lg-10 mx-auto" onsubmit="gameOn()">
                     <h1 class="game-title text-center">Game Bar</h1>
-                    <div class="form-group">
+                    
+                    <div class="form-group col-lg-8 mx-auto">
                         <label class="game-label">Player 1</label>
-                        <input type="text" class="form-control" placeholder="Name" required> 
+                        <input type="text" class="form-control" placeholder="Name here" id="player1" required> 
                     </div>
-
-                    <div class="form-group">
+        
+                    <div class="form-group col-lg-8 mx-auto mt-4">
                         <label class="game-label">Player 2</label>
-                        <input type="text" class="form-control" placeholder="Name" required> 
+                        <input type="text" class="form-control" placeholder="Name here" id="player2" required> 
                     </div>
-
-                    <div class="form-group w-25">
-                        <button type="submit" class="btn btn-lg btn-block game-btn btn-success">Let's Play<i class="fas fa-volleyball-ball pl-2"></i></button>
+        
+                    <div class="form-group col-lg-4 mx-auto mt-5">
+                        <button type="submit" class="btn btn-lg btn-block game-btn btn-info">Let's Play<i class="fas fa-volleyball-ball pl-2"></i></button>
                     </div>
                 </form>
             </div>
         </section>
+
+    <div class="row col-lg-12 pt-4" id="game-page">
+        <div class="col-lg-8 text-light mx-auto">
+            <div class="row mb-5 text-center text-uppercase text-info">
+                <div class="col-lg-6">
+                    <h4 id="player1name" class="font-weight-bold"></h4>
+                </div>
+                <div class="col-lg-6">
+                    <h4 id="player2name" class="font-weight-bold"></h4>
+                </div>
+            </div>
+            
+            <div class="mx-auto mt-n3"  id="spintxt-box">
+                <h3 class="text-center text-light mb-4" id="spin-txt">Spin to Decide Who starts the game First</h3>
+            </div>
+            <div class="col-lg-4 col-md-4 mx-auto" id="spinbtn-box">
+                <button id="spin-btn" class="btn btn-block btn-lg btn-info btn-outline-light" onclick="spinIt()">Spin 🎲</button>
+            </div>
+        </div>
+        <div class="col-lg-8 mx-auto my-auto" id="turntxt-box">
+            <h3 class="text-info text-center text-uppercase my-5" id="turn-text"></h3>
+            <table class="boxtable mx-auto my-auto">
+                <tr>
+                    <td onclick="cellClicked(event)" class="game-cell"></td>
+                    <td onclick="cellClicked(event)" class="game-cell"></td>
+                    <td onclick="cellClicked(event)" class="game-cell"></td>
+                </tr>
+                <tr>
+                    <td onclick="cellClicked(event)" class="game-cell"></td>
+                    <td onclick="cellClicked(event)" class="game-cell"></td>
+                    <td onclick="cellClicked(event)" class="game-cell"></td>
+                </tr>
+                <tr>
+                    <td onclick="cellClicked(event)" class="game-cell"></td>
+                    <td onclick="cellClicked(event)" class="game-cell"></td>
+                    <td onclick="cellClicked(event)" class="game-cell"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
     </main>
 
     <footer id="site-footer">

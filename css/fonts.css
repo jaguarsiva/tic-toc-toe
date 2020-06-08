@@ -3,12 +3,14 @@
 
 @font-face
 {
-    font-family: 'balsmiq';
-    src: url('../fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf');
+    font-family: 'Bungee';
+    src: url('../fonts/BungeeInline-Regular.ttf');
+    font-display: block;
 }
 
 @font-face
 {
-    font-family: 'ubuntu';
-    src: url('../fonts/Ubuntu/Ubuntu-Regular.ttf');
+    font-family: 'Monteserrat';
+    src: url('../fonts/Montserrat-Regular.ttf');
+    font-display: block;
 }
