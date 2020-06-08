@@ -3,14 +3,26 @@
 
 @font-face
 {
+<<<<<<< HEAD
     font-family: 'Bungee';
     src: url('../fonts/BungeeInline-Regular.ttf');
+=======
+    font-family: 'balsmiq';
+    src: url('../fonts/Balsamiq_Sans/BalsamiqSans-Regular.ttf');
+>>>>>>> 20ce7ab723a82a5bac0f36917b9eb05f312f77b8
     font-display: block;
 }
 
 @font-face
 {
+<<<<<<< HEAD
     font-family: 'Monteserrat';
     src: url('../fonts/Montserrat-Regular.ttf');
     font-display: block;
 }
+=======
+    font-family: 'ubuntu';
+    src: url('../fonts/Ubuntu/Ubuntu-Regular.ttf');
+    font-display: block;
+}
+>>>>>>> 20ce7ab723a82a5bac0f36917b9eb05f312f77b8
