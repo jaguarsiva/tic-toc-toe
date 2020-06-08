@@ -98,9 +98,9 @@ function spinIt()
         spinbtn.innerHTML = 'Start to Play 🚩';
         
         if(turn==1)
-        spintxt.innerHTML = player1+' Starts First';
+            spintxt.innerHTML = player1+' Starts First';
         else
-        spintxt.innerHTML = player2+' Starts First';
+            spintxt.innerHTML = player2+' Starts First';
     
         spintxt.classList.add('text-uppercase')
         controlflow = 1;
@@ -161,7 +161,7 @@ function cellClicked(event)
     cellCheck()
 }
 
-var cells,winner;
+var cells,winner='';
 const obj = document.getElementsByClassName('game-cell')
 
 function cellCheck()
@@ -186,12 +186,6 @@ function cellCheck()
             break;
         }
     
-    if(Full)
-    {
-        alert("Games Ends in a draw")
-        return;
-    }    
-    
     var arr1=[],arr2=[];
     for(let i=0;i<9;i++)
     {
@@ -201,26 +195,33 @@ function cellCheck()
             arr2.push(i)
     }
 
-    if(3 <= arr1.length)
-        if(checkArrayEquality(arr1))
+    if(3 <= arr1.length && checkArrayEquality(arr1))
         {
+            winner = player1;
+            turntxt.innerHTML = "Hurray! "+winner+" won the Game";
             setTimeout( function(){
                 alert(player1+" Won!..."); 
                }, 250);
-            winner = player1;
             pushWinner();
         }    
         
         
-        if(3 <= arr2.length)
-        if(checkArrayEquality(arr2))
+    if(3 <= arr2.length && checkArrayEquality(arr2))
         {
+            winner = player2;
+            turntxt.innerHTML = "Hurray! "+winner+" won the Game";
             setTimeout( function(){
                 alert(player2+" Won!..."); 
                }, 250);
-            winner = player2;
             pushWinner();
-        }    
+        }
+           
+    if(Full && winner=='')
+    {
+        alert("Games Ends in a draw")
+        pushWinner();
+        return;
+    }    
 }
 
 function checkArrayEquality(arr){
@@ -262,7 +263,6 @@ function isPresent(ele,array){
 }
 
 function pushWinner(){
-    turntxt.innerHTML = "Hurray! "+winner+" won the Game";
     document.getElementsByClassName('boxtable')[0].setAttribute('style','pointer-events:none;')
     setTimeout( function(){
         let cnfrmMSG = confirm("Do You want to replay!");
@@ -273,7 +273,9 @@ function pushWinner(){
 
 function restartGame()
 {
-    document.getElementById('spintxt-box').appendChild(spintxt);   
+    document.getElementById('spintxt-box').appendChild(spintxt);
+    spintxt.innerHTML = 'Spin to Decide Who starts the game First'
+    spintxt.classList.remove('text-uppercase')
     document.getElementById('spinbtn-box').appendChild(spinbtn);
     turntxt.remove();
     spinbtn.setAttribute('onclick','spinIt()');
