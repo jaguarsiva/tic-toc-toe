@@ -1,10 +1,8 @@
 # Welcome to the Tic Toc Toe game
 
-#### Play the game via the below Links 
+#### Play the game via the below Link 
 
-1 Using Github Pages : [Link - 1](https://jaguarsiva.github.io/tic-toc-toe/)
-
-2 Using Netlify : [Link - 2](https://tic-toc-toe-siva.netlify.app/)
+Using Netlify : [Link - 2](https://tic-toc-toe-siva.netlify.app/)
 
 ---
 
